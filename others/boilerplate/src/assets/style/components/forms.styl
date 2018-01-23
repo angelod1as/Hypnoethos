@@ -1,0 +1,73 @@
+@require '/vars'
+
+.form
+	@extend $width
+	font-size: 1em
+	padding: 0 20px
+	// Form específica mailchimp
+	@import "/mailchimp"
+	input,
+	textarea,
+	select
+		font-family: 'Merriweather', serif
+		font-size: $def-f-size
+		font-weight: 300
+		line-height: 1
+		margin: 10px auto
+		width: calc(100% - 20px - 4px)
+		height: 30px
+		border: 2px solid black
+		border-radius: 3px
+		padding: 10px
+		&:focus
+			background-color: black
+			color: white
+		&.button
+			@extend $buttons
+	fieldset
+		border: none
+		margin: 0
+		padding: 0
+	textarea
+		height: 100px
+	select
+		box-sizing: content-box
+		appearance: none
+	.loja__select
+		position: relative
+		background-color: rgba(0, 0, 0, 0)
+		&::before
+			z-index: 10
+			position: absolute
+			top: 38%
+			left: 10px
+			content: "▼"
+			width: auto
+			height: auto
+	select
+		text-indent: 20px
+		padding: 5px;
+		appearance: none;
+		position: relative
+		font-size: 0.9em
+		padding-left: 10px
+		&:focus
+			background-color: rgba(0, 0, 0, 0)
+			color: black
+	&__flex
+		display: flex
+		justify-content: space-between
+		@media (max-width: 600px)
+			display: block
+		.flex
+			width: auto
+		.flex_one_third
+			flex-basis: 32%
+		.flex_two_third
+			flex-basis: 66%
+		.flex_half
+			flex-basis: 48%
+	a
+		text-decoration: none
+
+

@@ -1,0 +1,219 @@
+extend ../layouts/special_blank
+
+append variables
+	- var headline= 'Tempos Fantásticos: O Jornal Atemporal';
+	- var pageDescription= 'O Tempos Fantásticos é um jornal satírico de ficção científica e especulativa com periodicidade mensal. Assine já ou baixe a primeira edição gratuitamente!';
+	- var url= '//www.temposfantasticos.com';
+	- var keywords= 'jornal, newspaper, sci-fi, ficção, científica, science, fiction, especulativa';
+	- var share_title= headline;
+	- var share_type= 'article';
+	- var share_image= url + 'images/social.jpg';
+	- var share_description= lead;
+
+block content
+	include ../includes/header
+
+	script(type='text/javascript', src='https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js')
+	
+	main.compre
+		section#assine
+			h1.title
+				span.title__italic assine já!
+			.text
+				.video
+					iframe(src='https://www.youtube.com/embed/deyWJ6Kzr2Y?rel=0&showinfo=0', frameborder='0', allowfullscreen='')
+				p Gostou do jornal e quer levá-lo para casa? Por que não assiná-lo e receber uma edição mensal em seu email? Ou até mesmo na caixa do correio?
+				p A assinatura do #[b.versalete Tempos Fantásticos] é feita através do site apoia.se. Com #[b R$ 2] mensais, você assina a versão digital, em PDF. Com #[b R$ 5], você recebe a versão em papel em qualquer lugar do Brasil.
+			form.form.assinatura
+				a(href="http://apoia.se/temposfantasticos", target="_blank")
+					button.button.modal__assine(type="button") Assinar
+
+		section#compre
+			h1.title
+				span.title__italic compre já!
+			.text
+				p Em breve, inauguraremos uma loja moderna e #[i prafrentex]. Por enquanto as compras devem ser feitas pelo formulário de contato.
+				p Escreva aí embaixo quais edições e quantas você quer comprar. A versão digital custa #[b R$ 2] e a impressa, #[b R$ 5].
+			section#formulario-compre
+				.form
+					form#gform(method='POST', action='https://script.google.com/macros/s/AKfycbysbbjqIht6Y9cHynToNZ5oIGuXhzSMw2tJ9AAwMfADQ54RcNM/exec')
+						fieldset
+							label(for='name') Nome:
+							input(name='name', placeholder='Nome')
+						fieldset
+							label(for='message') Quais edições e quantas quer comprar:
+							textarea(name='message', rows='10', placeholder="Quero vinte e cinco cópias de todas as edições pra ontem!")
+						fieldset
+							label(for='email') E-mail:
+							input(name='email', type='email', value='', required='', placeholder='seu.nome@email.com')
+							span(style='visibility:hidden') (Precisa ser um endereço de e-mail válido, com arroba e tal)
+						button.button Enviar
+					#thankyou_message(style='display:none;')
+						h2 Obrigado! Entraremos em contato em breve.
+					script(data-cfasync='false', type='text/javascript', src='https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js')
+
+		//- 	h2.subtitle ano dois
+		//- 	.loja
+		//- 		.loja__item
+		//- 			img(src="./images/ed1.jpg")
+		//- 			p.loja__numero #11
+		//- 			form.form
+		//- 				.loja__select
+		//- 					select(name="select")
+		//- 						option(value="impressa" data-price="5")
+		//- 							| Edição impressa
+		//- 						option(value="pdf" data-price="2")
+		//- 							| Edição em PDF
+		//- 						option(value="epub" data-price="2")
+		//- 							| Edição em ePub
+		//- 				.loja__preco
+		//- 					.preco_preco
+		//- 						p.preco_txt Preço
+		//- 						p.preco_num(data-value="5") R$ 5,00
+		//- 					.preco_qtd
+		//- 						p.preco_txt Qtd
+		//- 						input.form_qtd(type='number', name='quantity', min='1', max='20')
+		//- 				button.button.button__carrinho(type="button") Colocar no carrinho
+		//- 		.loja__item
+		//- 			img(src="./images/ed1.jpg")
+		//- 			p.loja__numero #10
+		//- 			form.form
+		//- 				.loja__select
+		//- 					select(name="select")
+		//- 						option(value="impressa" data-price="5")
+		//- 							| Edição impressa
+		//- 						option(value="pdf" data-price="2")
+		//- 							| Edição em PDF
+		//- 						option(value="epub" data-price="2")
+		//- 							| Edição em ePub
+		//- 				.loja__preco
+		//- 					.preco_preco
+		//- 						p.preco_txt Preço
+		//- 						p.preco_num(data-value="5") R$ 5,00
+		//- 					.preco_qtd
+		//- 						p.preco_txt Qtd
+		//- 						input.form_qtd(type='number', name='quantity', min='1', max='20')
+		//- 				button.button.button__carrinho(type="button") Colocar no carrinho
+		//- 		.loja__item
+		//- 			img(src="./images/ed1.jpg")
+		//- 			p.loja__numero #09
+		//- 			form.form
+		//- 				.loja__select
+		//- 					select(name="select")
+		//- 						option(value="impressa" data-price="5")
+		//- 							| Edição impressa
+		//- 						option(value="pdf" data-price="2")
+		//- 							| Edição em PDF
+		//- 						option(value="epub" data-price="2")
+		//- 							| Edição em ePub
+		//- 				.loja__preco
+		//- 					.preco_preco
+		//- 						p.preco_txt Preço
+		//- 						p.preco_num(data-value="5") R$ 5,00
+		//- 					.preco_qtd
+		//- 						p.preco_txt Qtd
+		//- 						input.form_qtd(type='number', name='quantity', min='1', max='20')
+		//- 				button.button.button__carrinho(type="button") Colocar no carrinho
+		//- 		.loja__item
+		//- 			img(src="./images/ed1.jpg")
+		//- 			p.loja__numero #08
+		//- 			form.form
+		//- 				.loja__select
+		//- 					select(name="select")
+		//- 						option(value="impressa" data-price="5")
+		//- 							| Edição impressa
+		//- 						option(value="pdf" data-price="2")
+		//- 							| Edição em PDF
+		//- 						option(value="epub" data-price="2")
+		//- 							| Edição em ePub
+		//- 				.loja__preco
+		//- 					.preco_preco
+		//- 						p.preco_txt Preço
+		//- 						p.preco_num(data-value="5") R$ 5,00
+		//- 					.preco_qtd
+		//- 						p.preco_txt Qtd
+		//- 						input.form_qtd(type='number', name='quantity', min='1', max='20')
+		//- 				button.button.button__carrinho(type="button") Colocar no carrinho
+
+		//- 	h2.subtitle ano um
+		
+		//- section#carrinho.carrinho.modal
+		//- 	.modal__inside
+		//- 		.modal__close
+		//- 			div ×
+		//- 		.modal__inside_carrinho
+		//- 			h2.subtitle carrinho
+		//- 			table.table
+		//- 				tr.first
+		//- 					th Firstname
+		//- 					th Lastname
+		//- 					th Age
+		//- 				tr
+		//- 					td Jill
+		//- 					td Smith
+		//- 					td 50
+		//- 				tr
+		//- 					td Eve
+		//- 					td Jackson
+		//- 					td 94
+
+		//- 		.modal__inside_assine
+		//- 			h2.subtitle assine
+		//- 			form.form
+		//- 				.form__flex
+		//- 					.flex_two_third
+		//- 						.loja__select.assine__select
+		//- 							select(name="select")
+		//- 								option(value="assine-impressa" data-price="5")
+		//- 									| Edição impressa
+		//- 								option(value="assine-pdf" data-price="2")
+		//- 									| Edição em PDF
+		//- 								option(value="assine-epub" data-price="2")
+		//- 									| Edição em ePub
+		//- 					.flex_one_third.assine__number(data-price="5")
+		//- 						p R$ <span>5</span> mensais
+		//- 				fieldset
+		//- 					label(for="name") Nome:
+		//- 					input(name="name", placeholder="Nome")
+		//- 				fieldset.endereco
+		//- 					.form__flex
+		//- 						.flex_two_third
+		//- 							label(for="rua") Rua, número e complemento
+		//- 							input(name="rua", placeholder="Rua da Internet, 42, apto 666")
+		//- 						.flex_one_third
+		//- 							label(for="bairro") Bairro
+		//- 							input(name="bairro", placeholder="Centro")
+		//- 					.form__flex
+		//- 						.flex_one_third
+		//- 							label(for="cep") CEP
+		//- 							input(name="cep", placeholder="00000000", type="number")
+		//- 						.flex_one_third
+		//- 							label(for="cidade") cidade
+		//- 							input(name="cidade", placeholder="Internet")
+		//- 						.flex_one_third
+		//- 							label(for="uf") UF
+		//- 							input(name="uf", placeholder="IN", maxlength="2")
+		//- 				fieldset
+		//- 					label(for="email") E-mail:
+		//- 					span.warning.email_warning(style="display:none") (Precisa ser um endereço de e-mail válido, com arroba e tal)
+		//- 					input(name="email", type="email", value="", required="", placeholder="seu.nome@email.com")
+		//- 				span.warning.button_warning(style="display:none") (preencha os dados completamente)
+		//- 				button.button.assine Assinar (usando o PagSeguro)
+			
+	.footer_loja
+		include ../includes/footer
+
+//- Exemplo de form Checkbox
+				div
+					input#checkbox1(type='checkbox', name='checkbox', value='1', checked='checked')
+					label(for='checkbox1')
+						span
+						| Option 1
+
+			//- Exemplo de form Radio
+				div
+						input#radio1(type='radio', name='radio', value='1', checked='checked')
+						label(for='radio1')
+							span
+								span
+							| Option 1

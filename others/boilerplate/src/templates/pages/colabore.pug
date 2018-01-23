@@ -1,0 +1,44 @@
+extend ../layouts/special_blank
+
+append variables
+	- var headline= 'Tempos Fantásticos: O Jornal Atemporal';
+	- var pageDescription= 'O Tempos Fantásticos é um jornal satírico de ficção científica e especulativa com periodicidade mensal. Assine já ou baixe a primeira edição gratuitamente!';
+	- var url= '//www.temposfantasticos.com';
+	- var keywords= 'jornal, newspaper, sci-fi, ficção, científica, science, fiction, especulativa';
+	- var share_title= headline;
+	- var share_type= 'article';
+	- var share_image= url + 'images/social.jpg';
+	- var share_description= lead;
+
+block content
+	include ../includes/header
+	
+	main.colabore
+		section#colabore
+			h1.title
+				span.title__italic colabore já!
+			.text
+				p Quem faz o #[b.versalete Tempos Fantásticos] o faz voluntariamente. No momento, o dinheiro que recebemos é revertido para a manutenção do projeto, novas impressões e custos operacionais.
+				p Se você gostou da proposta e quer produzir um texto, ilustração, montagem, tira ou algo a mais, entre em contato! Gostaremos ainda mais se você for iniciante (mas aceitamos com prazer colaboradores experientes).
+				p Nós te colocaremos em contato com um de nossos editores, e eles acompanharão você durante toda a produção, desde a ideia inicial até a finalização do texto.
+				p O que está esperando para colaborar com esse projeto autoral e independente? Mande uma mensagem agora!
+
+			section#formulario-colabore
+				.form
+					form#gform(method='POST', action='https://script.google.com/macros/s/AKfycbysbbjqIht6Y9cHynToNZ5oIGuXhzSMw2tJ9AAwMfADQ54RcNM/exec')
+						fieldset
+							label(for='name') Nome:
+							input(name='name', placeholder='Nome')
+						fieldset
+							label(for='message') Pauta, ideia ou mensagem:
+							textarea(name='message', rows='10', placeholder="Escreva aqui uma pauta, ideia ou mensagem")
+						fieldset
+							label(for='email') E-mail:
+							input(name='email', type='email', value='', required='', placeholder='seu.nome@email.com')
+							span(style='visibility:hidden') (Precisa ser um endereço de e-mail válido, com arroba e tal)
+						button.button Enviar
+					#thankyou_message(style='display:none;')
+						h2 Obrigado! Entraremos em contato em breve.
+					script(data-cfasync='false', type='text/javascript', src='https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js')
+
+	include ../includes/footer

@@ -1,0 +1,75 @@
+.modal
+	display: none
+	margin: 0
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 99999
+	overflow: scroll
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.8)
+	&__inside
+		position: relative
+		background-color white
+		$imargin = 40px
+		margin: $imargin auto
+		height: auto
+		width: "calc(700px + %s)" % ($imargin * 2)
+		@media (max-width: 600px)
+			margin: 40px auto
+			width: calc(100% - 40px)
+		.modal__close
+			cursor: pointer
+			$csize = 30px
+			background-color: white
+			border-radius: 3px
+			border: 2px solid black
+			height: $csize
+			width: $csize
+			position: absolute
+			top: -15px
+			right: -15px
+			display: flex
+			align-items: center
+			justify-content: center
+	&__open
+		display: block
+
+$modal_def
+	padding: 10px 0
+	max-width: 700px
+	margin: 0 auto
+
+.modal__inside
+	@media (max-width: 800px)
+		padding: 0 10px
+	.subtitle
+		padding: 0
+		margin: 0
+		&::before
+			display: none
+	.form
+		padding: 0
+	// Carrinho
+	&_carrinho
+		display: none
+		@extend $modal_def
+	&_assine
+		display: none
+		@extend $modal_def
+		fieldset
+			.endereco
+				display: none
+		.assine__number
+			display: flex
+			align-items: center
+			justify-content: center
+			p
+				font-weight: bold
+.warning
+	font-size: 0.8em
+
+
+
+

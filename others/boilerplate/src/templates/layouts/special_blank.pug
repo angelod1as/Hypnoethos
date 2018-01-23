@@ -1,0 +1,39 @@
+block variables
+
+doctype html
+html(lang="pt-br")
+	head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#")
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, shrink-to-fit=no')
+		link(rel='icon', type='image/x-icon', href='./images/favicon.ico')
+		link(rel='stylesheet', href='css/main.css')
+		script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=', crossorigin='anonymous')
+		title #{headline}
+		meta(name='description', content=share_description)
+		meta(name='keywords', content=keywords)
+		link(rel='canonical', href=url)
+		meta(property='og:url', content=url)
+		meta(property='og:image', content=share_image)
+		meta(property='og:description', content=share_description)
+		meta(property='og:title', content=share_title)
+		meta(property='og:site_name', content=share_title)
+		meta(property='og:see_also', content=url)
+		meta(itemprop='name', content=share_title)
+		meta(itemprop='description', content=share_description)
+		meta(itemprop='image', content=share_image)
+		meta(name='twitter:card', content=share_description)
+		meta(name='twitter:url', content=url)
+		meta(name='twitter:title', content=share_title)
+		meta(name='twitter:description', content=share_description)
+		meta(name='twitter:image', content=share_image)
+		meta(property='og:locale', content='pt_BR')
+		meta(property='og:type', content='article')
+		meta(name='twitter:card', content='summary_large_image')
+		meta(name='twitter:site', content='@angelod1as')
+
+	body
+
+		block content
+
+		script(src="js/main.js")

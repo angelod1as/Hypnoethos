@@ -1,0 +1,33 @@
+//- #mc_embed_signup
+//- 	form#mc-embedded-subscribe-form.validate(action='//tumblr.us13.list-manage.com/subscribe/post?u=5763cb0778ec81558f6d9304e&id=2a87629fcd', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+//- 		#mc_embed_signup_scroll
+//- 			.mc-field-group
+//- 				label(for='mce-EMAIL')
+//- 					| E-mail
+//- 					span.asterisk (obrigatório)
+//- 				|
+//- 				input#mce-EMAIL.required.email(type='email', value='', name='EMAIL')
+//- 			.mc-field-group
+//- 				label(for='mce-FNAME') Nome
+//- 				|
+//- 				input#mce-FNAME(type='text', value='', name='FNAME')
+//- 			.mc-field-group
+//- 				label(for='mce-LNAME') Sobrenome
+//- 				|
+//- 				input#mce-LNAME(type='text', value='', name='LNAME')
+//- 			#mce-responses.clear
+//- 				#mce-error-response.response(style='display:none')
+//- 				#mce-success-response.response(style='display:none')
+//- 			div(style='position: absolute; left: -5000px;', aria-hidden='true')
+//- 				input(type='text', name='b_5763cb0778ec81558f6d9304e_2a87629fcd', tabindex='-1', value='')
+//- 			.clear
+//- 				input#mc-embedded-subscribe.button(type='submit', value='Quero receber!', name='subscribe')
+
+
+p A newsletter do #[b.versalete Tempos Fantásticos] não é frequente e não vai encher a sua caixa de entrada de Spam. Nela, enviamos notícias sobre o jornal e conteúdo extra. Inscreva-se já!
+
+form.newsletter(action="https://tinyletter.com/temposfantasticos", method="post", target="popupwindow", onsubmit="window.open('https://tinyletter.com/temposfantasticos', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true")
+	label(for="tlemail") Insira seu e-mail
+	input#tlemail(type="text", name="email")
+	input(type="hidden", value="1", name="embed")
+	input.button(type="submit", value="Quero receber!")
