@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.corp.folha.com.br:rubensfernando/boilerplate-graphics-special.git"
+    "url": ""
   },
-  "author": "Rubens Fernando Alencar",
-  "license": "ISC",
+  "author": "Angelo Dias",
+  "license": "none",
   "paths": {
     "project": "./src/assets/",
     "templates": "./src/templates/",
