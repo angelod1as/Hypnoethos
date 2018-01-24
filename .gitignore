@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io/api/node,grunt,sass,jetbrains,webstorm,laravel,sublimetext,osx,linux
 
+others/boilerplate/docs/
+
 ### Node ###
 # Logs
 logs
