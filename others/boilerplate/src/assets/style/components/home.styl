@@ -1,65 +1,33 @@
 @require '/vars'
 
 .home
-	// Video da home
-	.video
-		.video__full
-
-			position: relative
-			padding-top: 25px
-			margin-bottom: 2%
-			height: 80vw
-			max-height 80vh
-			iframe
-				transition: filter 0.3s
-				filter: grayscale(100%);
-				&:hover
-					filter: grayscale(0%);
-				height: 80vw
-				max-height 80vh
-				width: 100%
-		.video__half
-			position: relative
-			padding-top: 0
-			height: 50vw
-			display: flex
-			justify-content: space-between
-			iframe
-				transition: filter 0.3s
-				filter: grayscale(100%);
-				&:hover
-					filter: grayscale(0%);
-				width: 49%
-				height: auto
-	.icon
-		margin: 30px auto
-		width: auto
+	.inicio
+		background-color: $roxo
+		color: $amarelo
+		height: 50vh
 		display: flex
-		align-items: center
-		justify-content: center
-		a
-			padding: 0
-			&::after
-				content: none
-		svg
-			height: 30px
-			margin: 0 10px
-			transition: all 0.3s
-			&:hover
-				transform: translateY(-10px)
+		max-width: 100%
+		.phrase
+			flex-grow: 0
+			display: flex
+			align-items: center
+			justify-content: center
+			blockquote
+				width: 50%
+				p
+					font-size: 1.5em
+					line-height: 1.2em
+				small
+					font-size: 1em
+					line-height: 2em
+		.logo
+			flex-grow: 0
+			margin-right: 20%
+			display: flex
+			img
+				align-self: center
+				width: 100%
+				height: auto
+				max-width: 280px
 
-	.form
-		a
-			text-decoration none
-
-	.expediente
-		&__txt
-			font-weight: bold
-			font-style: italic
-			font-size 1.3em
-		&__inner
-			padding: 20px
-		border: 1px solid black
-		border-radius 3px
-		@extend $width
 
