@@ -5,35 +5,39 @@
 	top: 0
 	left: 0
 	width: 100%
-	background-color: white
+	background-color: $amarelo
 	z-index: 1000
-	border-bottom: 1px solid black
-	margin-bottom: 40px
-	&__top
-		padding-top: 5px
-		text-align: center
-		a
-		a:hover
-		a:active
-		a:visited
-		a:link
-			text-decoration: none
-			color: black
-			font-size: 1.3em
-			font-weight: 700
-		a:after
-			content: none
-	&__bottom
-		padding: 5px 10px
+	display: flex
+	justify-content: space-between
+	&__left
 		display: flex
-		justify-content: space-between
-		font-weight: 300
-		font-style: italic
-		p
-			font-size: 0.7em
+		align-items: center
+		img
+			width: 250px
+			height: auto
+			padding-top: 5px
+	.menu
+		display: flex
+		align-items: stretch
 		a
-		a:hover
-		a:active
-		a:visited
-		a:link
-			font-size: 0.7em
+			cursor: pointer
+			display: block
+			font-weight: bold
+			padding: 10px 15px
+			color: $roxo
+			border: solid 2px $amarelo
+			background-color: $amarelo
+			&:hover
+				transform: scale(1.2)
+				background-color: $amarelo !important
+
+	a, a:hover,	a:active, a:visited, a:link
+		font-style: regular
+		color: $roxo
+		transition: none
+		cursor: pointer
+		font-size: 1em
+		box-shadow: none
+		&:hover
+			color: $roxo
+			background-color: transparent

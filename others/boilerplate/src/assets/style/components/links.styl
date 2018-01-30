@@ -1,27 +1,14 @@
 @require '/vars'
 a
-	position: relative
-	text-decoration: none
-	display: inline-block
-	color: black
-	padding: 0 1px
-	-webkit-transition: color ease 0.3s
-	transition: color ease 0.3s
+	font-style: italic
+	color: $roxo
+	transition: color ease 0.2s
+	cursor: pointer
+	font-size: 1em
+	box-shadow: inset 0 0px 0 white, inset 0 -1px 0 $amarelo
 	&:hover
-		color: white
-	&:after
-		content: ''
-		position: absolute
-		z-index: -1
-		width: 100%
-		height: 5%
-		left: 0
-		bottom: 0
-		background-color: black
-		color: white
-		transition: all ease 0.3s
-	&:hover::after
-		height: 100%
+		color: $amarelo
+		background-color: $roxo
 .form
 	a
 		position: initial
