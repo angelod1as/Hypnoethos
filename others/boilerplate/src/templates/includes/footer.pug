@@ -1,11 +1,22 @@
 footer.footer
-	.top
-		.button.top.modal__carrinho
-			p ver meu carrinho
-	.down
-		a.button.left(href="/loja.html")
-			.inside
-				p compre / assine
-		a.button.right(href="/colabore.html")
-			.inside
-				p colabore
+	.logo
+		img(src="images/logotext.png", alt="Logo da Hypnoethos")
+	.form_container
+		.form
+			p Entre em contato através do formulário abaixo
+			form#gform(method='POST', action='https://script.google.com/a/angelodias.com.br/macros/s/AKfycbxjYLOGV6mlqe7tHUPSgUY_qPk5m3ESrvg-boSkgITaK9S3MlE/exec')
+				fieldset
+					label(for='name') nome:
+					input(name='name', placeholder='Nome')
+				fieldset
+					label(for='message') mensagem:
+					textarea(name='message', rows='10', placeholder="Escreva aqui sua mensagem")
+				fieldset
+					label(for='email') e-mail:
+					input(name='email', type='email', value='', required='', placeholder='seu.nome@email.com')
+					span(style='visibility:hidden') (É necessário um email válido, com arroba)
+				button.button Enviar
+			#thankyou_message(style='display:none;')
+				h2 Obrigado! Entraremos em contato em breve.
+			script(data-cfasync='false', type='text/javascript', src='https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js')
+

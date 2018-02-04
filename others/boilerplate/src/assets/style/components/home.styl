@@ -5,6 +5,8 @@
 		min-height: 50vh
 		display: flex
 		margin-top: 40px
+		+below(600px)
+			flex-direction: column-reverse
 		.phrase
 			flex-grow: 0
 			display: flex
@@ -16,9 +18,20 @@
 				p
 					font-size: 2em
 					line-height: 1.2em
-				small
+				.small
 					font-size: 1em
 					line-height: 2em
+			+below(600px)
+				blockquote
+					padding: 0
+					margin: 30px 20px
+					width: 100%
+					p
+						font-size: 1.7em
+						text-align: center
+					.small
+						text-align: center
+						margin: 0 auto
 		.logo
 			flex-grow: 0
 			margin-right: 20%
@@ -28,6 +41,10 @@
 				width: 100%
 				height: auto
 				max-width: 500px
+			+below(600px)
+				max-width: 100px
+				text-align: center
+				margin: 30px auto 0 auto
 
 	.bio
 		display: flex
@@ -49,3 +66,8 @@
 				span
 					font-size: 1.4em
 					display: block
+		+below(700px)
+			display: block
+			padding: 20px 0
+			figure
+				margin: 50px auto 20px auto

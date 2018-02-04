@@ -9,19 +9,23 @@
 	input,
 	textarea,
 	select
-		font-family: 'Merriweather', serif
+		font-family: $font
 		font-size: $def-f-size
 		font-weight: 300
 		line-height: 1
 		margin: 10px auto
 		width: calc(100% - 20px - 4px)
 		height: 30px
-		border: 2px solid black
 		border-radius: 3px
 		padding: 10px
+		border 1px solid $amarelo
+		background-color: $roxo
+		color: $amarelo
 		&:focus
-			background-color: black
-			color: white
+			background-color: $amarelo
+			color: $roxo
+		&::placeholder
+			color: darken($amarelo,50%)
 		&.button
 			@extend $buttons
 	fieldset
