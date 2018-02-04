@@ -3,10 +3,17 @@ header.header
 		a(href="/index.html")
 			img(src="/images/textlogo.png")
 	.header__right
-		.menu
-			a first item
-			a second item
-			a third item
+		nav.menu
+			.modal__btn
+			ul.top
+				li #[a(href="#") first item]
+				li #[a(href="#") second item]
+				li.dropdown dropdown
+					ul
+						li #[a(href="#") first item]
+						li #[a(href="#") second item]
+				li #[a(href="#") third item]
+
 
 
 

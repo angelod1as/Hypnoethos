@@ -9,6 +9,7 @@
 	z-index: 1000
 	display: flex
 	justify-content: space-between
+	height: 55px
 	&__left
 		display: flex
 		align-items: center
@@ -16,28 +17,153 @@
 			width: 250px
 			height: auto
 			padding-top: 5px
-	.menu
-		display: flex
-		align-items: stretch
-		a
-			cursor: pointer
-			display: block
-			font-weight: bold
-			padding: 10px 15px
-			color: $roxo
-			border: solid 2px $amarelo
-			background-color: $amarelo
-			&:hover
-				transform: scale(1.2)
-				background-color: $amarelo !important
+			padding-left: 10px
+			+below(800px)
+				width: 150px
+	&__right
+		.menu
+			display: flex
+			align-items: stretch
+			padding-left: 20px
+			li
+				font-style: italic
+				cursor: pointer
+				display: block
+				font-weight: bold
+				padding: 10px 15px
+				color: $roxo
+				border: solid 2px $amarelo
+				background-color: $amarelo
+				position: relative
+				float: left
+				ul
+					cursor: pointer
+					position: absolute
+					top: 40px
+					left: 0
+					background-color: $amarelo
+					opacity: 0
+					visibility: hidden
+					padding: 5px
+					border-radius: 5px
+					box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+					transition: opacity .4s ease
+					li
+						padding-top: 5px
+						a
+							color: $roxo
+				&:hover, &:focus, &:active
+					ul
+						visibility: visible
+						opacity: 1
+				&.dropdown:after
+					content: "..."
+					position: absolute
+					top: 50%
+					left: 50%
+				&.dropdown:hover:after
+					content: ""
+	// hover do menu
+	a
+		transition: text-shadow .5s ease
+		&:hover
+			text-shadow: 2px 2px darken($amarelo, 30%)
 
-	a, a:hover,	a:active, a:visited, a:link
-		font-style: regular
+	// MOBILE
+	+below(800px)
+		.menu
+			visibility: visible
+			display: block
+			position: relative
+			height: 55px
+			width: 55px
+			cursor: pointer
+			&:after
+				text-align: right
+				content: "\2630"
+				font-size: 3em
+				line-height: 1em
+				color: $roxo
+				position: absolute
+				top: 0
+				right: 0
+				z-index: 1000
+				visibility: visible
+				height: 55px
+				width: 55px
+			li, ul
+				display: none
+			.modal__btn
+				display: block
+				position: absolute
+				top: 0
+				right: 0
+				height: 55px
+				width: 55px
+				background-color: transparent
+				z-index: 11000
+
+		.modal
+			&.menu
+				display: block
+				position: relative
+				&:after
+					content: "✕"
+					font-size: 2.8em
+			ul, li
+				display: block
+				visibility: visible
+				float: none
+				margin: 0
+				padding: 0
+			ul.top
+				text-align: right
+				margin: 0
+				position: fixed
+				top: 55px
+				right: 0
+				z-index: 999
+				overflow: scroll
+				width: 100%
+				height: 100%
+				background-color: rgba(0, 0, 0, 0.8)
+				li
+					padding: 5px 0
+				.dropdown
+					padding-right: 5px
+					position: relative
+					cursor: auto
+					ul
+						position: relative
+						top: 0
+						left: 0
+						background-color: $amarelo
+						opacity: 1
+						visibility: visible
+						padding: 0
+						border-radius: 0
+						box-shadow: none
+						transition: none
+						li
+							padding-right: 30px
+							position: relative
+							&:after
+								content:"—"
+								position: absolute
+								top: 5px
+								right: 0
+					&:after
+						content: none
+	li
+		list-style: none
+
+	a, a:hover,	a:active, a:visited, a:link, li, ul
+		font-style: italic
 		color: $roxo
 		transition: none
 		cursor: pointer
-		font-size: 1em
 		box-shadow: none
+		text-decoration: none
 		&:hover
 			color: $roxo
-			background-color: transparent
+			background-color: $amarelo
