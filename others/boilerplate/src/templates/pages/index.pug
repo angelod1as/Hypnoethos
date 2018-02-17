@@ -1,10 +1,10 @@
 extend ../layouts/special_blank
 
 append variables
-	- var headline= 'Tempos Fantásticos: O Jornal Atemporal';
-	- var pageDescription= 'O Tempos Fantásticos é um jornal satírico de ficção científica e especulativa com periodicidade mensal. Assine já ou baixe a primeira edição gratuitamente!';
-	- var url= 'http://www.temposfantasticos.com/';
-	- var keywords= 'jornal, newspaper, sci-fi, ficção, científica, science, fiction, especulativa';
+	- var headline= 'Hypnoethos';
+	- var pageDescription= 'Hypnoethos';
+	- var url= 'http://www.hypnoethos.com/';
+	- var keywords= 'hipnose, terapia, hipnoterapia';
 	- var share_title= headline;
 	- var share_type= 'article';
 	- var share_image= url + 'images/social.png';
@@ -49,9 +49,10 @@ block content
 				p Sempre fui alguém apaixonado pelo ser humano. Sendo professor há 15 anos e consultor há 10, pude ajudar pessoas em toda minha trajetória a se desenvolverem no que queriam ser melhores. Nessa paixão pelo desenvolvimento humano, sempre busquei ferramentas no campo acadêmico, como a Filosofia, a Pedagogia, a Psicologia e a Hipnose, para transformar minhas questões internas e, assim, transformar o mundo à minha volta.
 				p Nessa busca, o processo de Hipnoterapia OMNI se mostrou uma ferramenta eficaz, com todo o respaldo científico que sempre motivou meu caminho, para transformar a minha vida e a das pessoas à minha volta. Usar essa ferramenta me tornou capaz de reconectar-me à minha natureza essencial, construindo um processo intenso de curas internas e me auxiliando no planejamento do meu papel do mundo.
 				p Assim, resolvi transformar-me num propagador dessa ferramenta. Por isso, atualmente atuo como hipnoterapeuta, utilizando das ferramentas que estão à minha disposição para ajudar meus clientes a melhorarem em tudo que quiserem melhorar.
-			figure.bio__img
-				img.round(src="images/placeholder.png")
-				figcaption #[span Fernando Aires] Hipnoterapeuta
+			.bio__img
+				figure
+					img.round(src="images/placeholder.png")
+					figcaption #[span Fernando Aires] Hipnoterapeuta
 
 		section#certificacoes
 			h2.subtitle certificações e formações
@@ -70,16 +71,22 @@ block content
 		section#cards.cards.full
 			.card
 				.card__text
+					figure
+						img(src="images/placeholder.png")
 					h3 título
 					p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto voluptas aliquam sunt aspernatur molestias nesciunt sapiente tenetur voluptatem maxime ut inventore saepe officia ipsum, ipsa perferendis neque error earum soluta.
 				button leia mais
 			.card
 				.card__text
+					figure
+						img(src="images/placeholder.png")
 					h3 título
 					p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis rem libero dolore eum quasi tempore commodi voluptate porro inventore cupiditate harum ipsam ad debitis quia, ea est veritatis, aspernatur doloremque.
 				button leia mais
 			.card
 				.card__text
+					figure
+						img(src="images/placeholder.png")
 					h3 título
 					p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis rem libero dolore eum quasi tempore commodi voluptate porro inventore cupiditate harum ipsam ad debitis quia, ea est veritatis, aspernatur doloremque.
 				button leia mais
