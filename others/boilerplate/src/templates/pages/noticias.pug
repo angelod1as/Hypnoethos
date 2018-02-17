@@ -1,0 +1,31 @@
+extend ../layouts/special_blank
+
+append variables
+	- var headline= 'Tempos Fantásticos: O Jornal Atemporal';
+	- var pageDescription= 'O Tempos Fantásticos é um jornal satírico de ficção científica e especulativa com periodicidade mensal. Assine já ou baixe a primeira edição gratuitamente!';
+	- var url= '//www.temposfantasticos.com';
+	- var keywords= 'jornal, newspaper, sci-fi, ficção, científica, science, fiction, especulativa';
+	- var share_title= headline;
+	- var share_type= 'article';
+	- var share_image= url + 'images/social.jpg';
+	- var share_description= lead;
+
+block content
+	include ../includes/header
+	
+	.news
+		.head
+			h1 notícias
+		section.post
+			h2.subtitle Título do post
+			.text
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque vero, numquam eius sed, ullam fugiat voluptatem veniam quam maxime iure, reiciendis vel! Ipsum consequatur ipsa vitae tenetur, exercitationem doloribus!
+				button leia mais
+		
+		section.post
+			h2.subtitle Título do post
+			.text
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque vero, numquam eius sed, ullam fugiat voluptatem veniam quam maxime iure, reiciendis vel! Ipsum consequatur ipsa vitae tenetur, exercitationem doloribus!
+				button leia mais
+
+	include ../includes/footer

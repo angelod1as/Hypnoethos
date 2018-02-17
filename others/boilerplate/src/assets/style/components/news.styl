@@ -1,0 +1,32 @@
+@require '/vars'
+
+.news
+	.head
+		padding: 40px 0 0 0
+		background-color: $roxo
+		position relative
+		h1
+			display: block
+			margin: 0 auto
+			font-size: 4em
+			color: $amarelo
+			line-height: 3em
+			max-width: 680px
+			padding: 0 20px
+	.post
+		margin: 100px auto
+		h2
+			margin-bottom: 30px;
+			position relative
+			display: block
+			line-height: 1em
+			&:after
+				content: url(../images/smallicon.svg)
+				position: absolute
+				top: 0
+				left: -30px
+				width: 30px
+				height: auto
+		button
+			max-width: 200px
+			margin: 30px 0 0 0
