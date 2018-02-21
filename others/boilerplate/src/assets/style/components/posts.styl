@@ -1,0 +1,39 @@
+@require '/vars'
+
+.posts
+	margin: 130px auto 100px auto
+
+	.link_return
+		margin: 0 0 0 40px
+		position: relative
+		color: $roxo
+		box-shadow: none
+		text-decoration: none
+		&:after
+			content: '<'
+			position: absolute
+			top: 0
+			left: -20px
+			color: $amarelo
+		&:hover
+			color: $amarelo
+			&:after
+				color: $roxo
+
+	img
+		margin: 20px auto
+		max-width: 100%
+		height: auto
+
+	img + em
+		display: block
+		margin: -20px 0 20px 20px
+		position relative
+		color: $roxo
+		&:after
+			content: '>'
+			position absolute
+			top: 0
+			left: -20px
+			color: $amarelo
+
