@@ -1,14 +1,14 @@
 extend ../layouts/special_blank
 
 append variables
-	- var headline= 'Tempos Fantásticos: O Jornal Atemporal';
-	- var pageDescription= 'O Tempos Fantásticos é um jornal satírico de ficção científica e especulativa com periodicidade mensal. Assine já ou baixe a primeira edição gratuitamente!';
-	- var url= '//www.temposfantasticos.com';
-	- var keywords= 'jornal, newspaper, sci-fi, ficção, científica, science, fiction, especulativa';
+	- var headline= 'Hypnoethos';
+	- var pageDescription= 'Hypnoethos';
+	- var url= 'http://www.hypnoethos.com/';
+	- var keywords= 'hipnose, terapia, hipnoterapia';
 	- var share_title= headline;
 	- var share_type= 'article';
-	- var share_image= url + 'images/social.jpg';
-	- var share_description= lead;
+	- var share_image= url + 'images/social.png';
+	- var share_description= pageDescription;
 
 block content
 	include ../includes/header
@@ -20,12 +20,14 @@ block content
 			h2.subtitle Título do post
 			.text
 				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque vero, numquam eius sed, ullam fugiat voluptatem veniam quam maxime iure, reiciendis vel! Ipsum consequatur ipsa vitae tenetur, exercitationem doloribus!
-				button leia mais
-		
+				a(href="./post.html", title="post").button_link
+					button leia mais
+
 		section.post
 			h2.subtitle Título do post
 			.text
 				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque vero, numquam eius sed, ullam fugiat voluptatem veniam quam maxime iure, reiciendis vel! Ipsum consequatur ipsa vitae tenetur, exercitationem doloribus!
-				button leia mais
+				a(href="./post.html", title="post").button_link
+					button leia mais
 
 	include ../includes/footer

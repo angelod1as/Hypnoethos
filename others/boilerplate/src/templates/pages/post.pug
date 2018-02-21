@@ -1,0 +1,31 @@
+extend ../layouts/special_blank
+
+append variables
+	- var headline= 'Hypnoethos';
+	- var pageDescription= 'Hypnoethos';
+	- var url= 'http://www.hypnoethos.com/';
+	- var keywords= 'hipnose, terapia, hipnoterapia';
+	- var share_title= headline;
+	- var share_type= 'article';
+	- var share_image= url + 'images/social.png';
+	- var share_description= pageDescription;
+
+block content
+	include ../includes/header
+	
+	.post
+		section.post
+			h2.subtitle Título do post
+			.text
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque vero, numquam eius sed, ullam fugiat voluptatem veniam quam maxime iure, reiciendis vel! Ipsum consequatur ipsa vitae tenetur, exercitationem doloribus!
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque vero, numquam eius sed, ullam fugiat voluptatem veniam quam maxime iure, reiciendis vel! Ipsum consequatur ipsa vitae tenetur, exercitationem doloribus!
+				h1 Teste h1
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eaque vero, numquam eius sed, ullam fugiat voluptatem veniam quam maxime iure, reiciendis vel! Ipsum consequatur ipsa vitae tenetur, exercitationem doloribus!
+				h2 Teste h2
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repellat iure, nobis explicabo consequatur commodi molestiae beatae! Cumque reiciendis impedit facere voluptates aspernatur culpa maxime ea, eligendi non, natus incidunt.
+				h3 Teste h3
+				p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, animi amet? Et rem qui dignissimos reprehenderit. Fuga quaerat excepturi vero quia, placeat ut ipsum commodi perspiciatis autem, praesentium natus veritatis!
+				h4 teste h4
+				p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo aliquam molestias exercitationem voluptates aperiam corrupti. Animi sit necessitatibus ea accusantium est voluptates repudiandae, aut perspiciatis quibusdam asperiores quasi rerum incidunt
+
+	include ../includes/footer
