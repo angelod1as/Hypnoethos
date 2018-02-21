@@ -6,7 +6,6 @@ window.$ = jQuery;
 window.jQuery = jQuery;
 
 $(document).ready(() => {
-	console.log('oi');
 	$('.modal__btn').on('click', () => {
 		$('.menu').toggleClass('modal');
 	});

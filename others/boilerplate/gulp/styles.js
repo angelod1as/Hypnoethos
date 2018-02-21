@@ -55,8 +55,8 @@ gulp.task('styles', () => {
 		})
 		.pipe(postcss(configPostcss))
 		.pipe(environments.development(sourcemaps.write()))
-		// Write CSS to build/css
-		.pipe(environments.production(cssnano()))
+		// Write CSS to build/css --comentei para não minificar
+		// .pipe(environments.production(cssnano()))
 		.pipe(gulp.dest(dest))
 		.pipe(environments.development(browserSync.stream()));
 });

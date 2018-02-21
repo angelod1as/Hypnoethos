@@ -17,13 +17,17 @@ const dest = pkg.paths.build;
 
 // Pug compile
 gulp.task('templates', () => {
-  return gulp.src(src)
-    .pipe(pug())
+	return gulp.src(src)
+		// pretty:true = não minifica
+    .pipe(pug({
+			pretty: true
+		}))
     .on('error', function(error) {
       gutil.log(error.message);
       this.emit('end');
-    })
-    .pipe(environments.development(prettify()))
+		})
+		// comentei para não minificar
+    // .pipe(environments.development(prettify()))
     // .pipe(environments.production(cachebust()))
     .pipe(gulp.dest(dest));
 });
