@@ -1,8 +1,6 @@
 ---
-title: Hello
-layout: default
+title: Hypnoethos
+layout: index
 ---
 
-Hello!
-
-Testando!!
+conteúdo do index

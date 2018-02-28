@@ -1,0 +1,59 @@
+.cards {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #000;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.cards .card {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px 40px;
+  max-width: 230px;
+  min-width: 230px;
+  border-radius: 5px;
+}
+.cards .card figure img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.cards .card h3 {
+  color: $roxo;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  padding-bottom: 10px;
+}
+.cards .card p {
+  font-size: 0.95em;
+  line-height: 1.3em;
+}
+.cards button {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 1080px) {
+  .cards .card {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,53 @@
+.subtitle {
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+}
+.subtitle {
+  color: #2b1547;
+  padding: 0 20px;
+  margin-bottom: 40px;
+  position: relative;
+  font-size: 2.5em;
+  line-height: 1.3em;
+}
+.text h1,
+.text h2,
+.text h3,
+.text h4 {
+  font-weight: bold;
+  margin: 0 0 0 30px;
+  position: relative;
+  color: #2b1547;
+}
+.text h1:after,
+.text h2:after,
+.text h3:after,
+.text h4:after {
+  font-weight: 100;
+  content: '>';
+  position: absolute;
+  top: 0;
+  left: -30px;
+  color: #ffba49;
+}
+.text h1 {
+  font-size: 1.7em;
+  line-height: 2em;
+}
+.text h2 {
+  font-size: 1.3em;
+  line-height: 2em;
+}
+.text h3 {
+  font-size: 1em;
+  line-height: 2em;
+}
+.text h4 {
+  line-height: 2em;
+  font-style: normal;
+}
+@media (max-width: 510px) {
+  .subtitle {
+    font-size: 2em;
+  }
+}

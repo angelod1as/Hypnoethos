@@ -1,0 +1,155 @@
+.form {
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+}
+.form input.button,
+.form textarea.button,
+.form select.button {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  height: auto;
+  padding: 10px;
+  color: #2b1547;
+  background-color: #ffba49;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: solid 1px #ffba49;
+  border-radius: 5px;
+}
+.form input.button:hover,
+.form textarea.button:hover,
+.form select.button:hover {
+  background-color: #2b1547;
+  color: #ffba49;
+  font-weight: bold;
+  font-style: italic;
+  border: solid 1px #ffba49;
+}
+.form {
+  font-size: 1em;
+  padding: 0 20px;
+}
+.form .newsletter {
+  margin: 10px 0;
+}
+.form label {
+  display: block;
+}
+.form .indicates-required {
+  font-size: 0.8em;
+}
+.form .asterisk {
+  font-size: 0.7em;
+}
+.form input,
+.form textarea,
+.form select {
+  font-family: 'Cardo', serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  margin: 10px auto;
+  width: calc(100% - 20px - 4px);
+  height: 30px;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid #ffba49;
+  background-color: #2b1547;
+  color: #ffba49;
+}
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  background-color: #ffba49;
+  color: #2b1547;
+}
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder,
+.form select::-webkit-input-placeholder {
+  color: #a46600;
+}
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder,
+.form select:-ms-input-placeholder {
+  color: #a46600;
+}
+.form input::placeholder,
+.form textarea::placeholder,
+.form select::placeholder {
+  color: #a46600;
+}
+.form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.form textarea {
+  height: 100px;
+}
+.form select {
+  box-sizing: content-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.form .loja__select {
+  position: relative;
+  background-color: rgba(0,0,0,0);
+}
+.form .loja__select::before {
+  z-index: 10;
+  position: absolute;
+  top: 38%;
+  left: 10px;
+  content: "▼";
+  width: auto;
+  height: auto;
+}
+.form select {
+  text-indent: 20px;
+  padding: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  font-size: 0.9em;
+  padding-left: 10px;
+}
+.form select:focus {
+  background-color: rgba(0,0,0,0);
+  color: #000;
+}
+.form__flex {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.form__flex .flex {
+  width: auto;
+}
+.form__flex .flex_one_third {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+.form__flex .flex_two_third {
+  -ms-flex-preferred-size: 66%;
+      flex-basis: 66%;
+}
+.form__flex .flex_half {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+}
+.form a {
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .form__flex {
+    display: block;
+  }
+}

@@ -1,0 +1,11 @@
+.text p,
+.text li {
+  max-width: 700px;
+  margin: 0 auto 15px auto;
+}
+.text {
+  padding: 0 20px;
+}
+.text p {
+  line-height: 150%;
+}

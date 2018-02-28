@@ -1,0 +1,53 @@
+input[type=checkbox],
+input[type=radio ] {
+  cursor: pointer;
+}
+input[type=checkbox]:not(old),
+input[type=radio ]:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  opacity: 0;
+}
+input[type=checkbox]:not(old) + label,
+input[type=radio ]:not(old) + label {
+  display: inline-block;
+  margin-left: -2em;
+  line-height: 1.5em;
+}
+input[type=checkbox]:not(old) + label > span,
+input[type=radio ]:not(old) + label > span {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0.25em 0.5em 0.25em 0.25em;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: #fff;
+  vertical-align: bottom;
+}
+input[type=checkbox]:not(old):checked + label > span:before {
+  content: '✓';
+  display: block;
+  width: 1em;
+  color: #000;
+  font-size: 1.2em;
+  line-height: 0.7em;
+  text-align: center;
+  font-weight: bold;
+}
+input[type=radio]:not(old):checked + label > span > span {
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  margin: 0.25em;
+  border-radius: 50%;
+  background: #000;
+}
+@media (max-width: 480px) {
+  input[type=checkbox]:not(old) + label,
+  input[type=radio ]:not(old) + label {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,10 @@
+  {% assign cards = site.collections %}
+  this is {{ cards }}
+  {% for card in cards %}
+    <p>LOOP</p>
+    {{ forloop.index }}
+  {% endfor %}
+
+<section class="cards {{ section.fullWidth }}" id="cards">
+
+</section>

@@ -1,0 +1,25 @@
+<!DOCTYPE>
+<html lang="pt-br">
+{% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <!-- CONTEÚDO DAS SECTIONS -->
+    <main class="home">
+      {% assign sections = site.sections | sort: 'order' %}
+      {% for section in sections %}
+        {% if section.include != null %}
+          {% include {{ section.include }} %}
+        {% else %}
+          {% include sections/default.html %}
+        {% endif %}
+      {% endfor %}
+    </main>
+
+    {% include footer.html %}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+

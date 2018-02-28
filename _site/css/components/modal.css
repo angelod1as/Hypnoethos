@@ -1,0 +1,97 @@
+.modal {
+  display: none;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+.modal__inside {
+  position: relative;
+  background-color: #fff;
+  margin: 40px auto;
+  height: auto;
+  width: calc(700px + 80px);
+}
+.modal__inside .modal__close {
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 2px solid #000;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.modal__open {
+  display: block;
+}
+.modal__inside_carrinho,
+.modal__inside_assine {
+  padding: 10px 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.modal__inside .subtitle {
+  padding: 0;
+  margin: 0;
+}
+.modal__inside .subtitle::before {
+  display: none;
+}
+.modal__inside .form {
+  padding: 0;
+}
+.modal__inside_carrinho {
+  display: none;
+}
+.modal__inside_assine {
+  display: none;
+}
+.modal__inside_assine fieldset .endereco {
+  display: none;
+}
+.modal__inside_assine .assine__number {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.modal__inside_assine .assine__number p {
+  font-weight: bold;
+}
+.warning {
+  font-size: 0.8em;
+}
+@media (max-width: 600px) {
+  .modal__inside {
+    margin: 40px auto;
+    width: calc(100% - 40px);
+  }
+}
+@media (max-width: 800px) {
+  .modal__inside {
+    padding: 0 10px;
+  }
+}

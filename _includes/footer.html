@@ -1,0 +1,30 @@
+<footer class="footer" id="contato">
+  <div class="logo">
+    <img src="images/logotext.png" alt="Logo da Hypnoethos">
+  </div>
+  <div class="form_container">
+    <div class="form">
+      <p>Entre em contato através do formulário abaixo</p>
+      <form id="gform" method="POST" action="https://script.google.com/a/angelodias.com.br/macros/s/AKfycbxjYLOGV6mlqe7tHUPSgUY_qPk5m3ESrvg-boSkgITaK9S3MlE/exec">
+        <fieldset>
+          <label for="name">nome:</label>
+          <input name="name" placeholder="Nome">
+        </fieldset>
+        <fieldset>
+          <label for="message">mensagem:</label>
+          <textarea name="message" rows="10" placeholder="Escreva aqui sua mensagem"></textarea>
+        </fieldset>
+        <fieldset>
+          <label for="email">e-mail:</label>
+          <input name="email" type="email" value="" required="" placeholder="seu.nome@email.com">
+          <span style="visibility:hidden;">(É necessário um email válido, com arroba)</span>
+        </fieldset>
+        <button class="button">Enviar</button>
+      </form>
+      <div id="thankyou_message" style="display:none;">
+        <h2>Obrigado! Entraremos em contato em breve.</h2>
+      </div>
+      <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+    </div>
+  </div>
+</footer>

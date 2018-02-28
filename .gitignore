@@ -267,3 +267,5 @@ Temporary Items
 
 *.lock
 
+.jekyll-metadata
+

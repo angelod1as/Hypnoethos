@@ -1,0 +1,64 @@
+button,
+.button {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  height: auto;
+  padding: 10px;
+  color: #2b1547;
+  background-color: #ffba49;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: solid 1px #ffba49;
+  border-radius: 5px;
+}
+button:hover,
+.button:hover {
+  background-color: #2b1547;
+  color: #ffba49;
+  font-weight: bold;
+  font-style: italic;
+  border: solid 1px #ffba49;
+}
+body {
+  font-family: 'Cardo', serif;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+}
+body.noscroll {
+  overflow: hidden;
+}
+p,
+div {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 150%;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+}
+section {
+  margin: 50px auto;
+  max-width: 700px;
+  height: auto;
+}
+main {
+  margin-bottom: 130px;
+}
+.full {
+  background-color: #2b1547;
+  max-width: 100%;
+  color: #ffba49;
+}
+img.round {
+  border-radius: 50%;
+}
