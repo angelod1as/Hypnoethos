@@ -1,0 +1,14 @@
+{% unless card.hidden %}
+<div class="card">
+  <div class="card__text">
+    <figure>
+      <img src="{{ card.image }}">
+    </figure>
+    <h3>{{ card.title }}</h3>
+    {{ card.content }}
+  </div>
+  <a class="button_link" href="{{ card.link }}" title="post">
+    <button>{{ card.button }}</button>
+  </a>
+</div>
+{% endunless %}

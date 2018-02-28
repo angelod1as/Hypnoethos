@@ -1,0 +1,21 @@
+---
+# NUNCA USAR TABS, SEMPRE 2 ESPAÇOS
+-
+  url: abc
+  title: menu
+-
+  url: abc
+  title: menu2
+-
+  url: abc
+  title: menu3
+  dropdown:
+    0:
+      url: sub1URL
+      title: sub1
+    1:
+      url: sub2URL
+      title: sub2
+-
+  url: '#contato'
+  title: contato

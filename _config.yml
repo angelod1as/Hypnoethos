@@ -1,5 +1,12 @@
 title: Hypnoethos
-exclude: ['README.markdown', 'Gemfile.lock', 'Gemfile', others]
+mainUrl: http://www.hypnoethos.com/
+# Para correto SEO, preencher abaixo:
+keywords: hipnose, terapia, hipnoterapia
+description: Um site de hipnoterapia
+twitterHandler: hypnoethos
+
+# Configurações
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', others]
 collections:
 - sections
 - cards
