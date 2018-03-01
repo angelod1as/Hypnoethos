@@ -4,7 +4,7 @@ title: título
 # Specify the layout for this section
 order: 1
 include: card.html
-link: ./post.html
+link: post.html
 button: leia mais
 image: images/placeholder.png
 ---
