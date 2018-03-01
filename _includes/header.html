@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header__left">
-    <a href="/index.html">
-      <img src="/images/textlogo.png">
+    <a href="{{ site.url }}/index.html">
+      <img src="{{ site.url }}/images/textlogo.png">
     </a>
   </div>
   <div class="header__right">
@@ -15,14 +15,14 @@
                 {% for drop in item.dropdown %}
                   <li>
                     {% assign i = forloop.index0 %}
-                    <a href="{{ item.dropdown[i].url }}">{{ item.dropdown[i].title }}</a>
+                    <a href="{{ site.url}}/{{ item.dropdown[i].url }}">{{ item.dropdown[i].title }}</a>
                   </li>
                 {% endfor %}
               </ul>
             </li>
           {% else %}
             <li>
-              <a href="{{ item.url }}">{{ item.title }}</a>
+              <a href="{{ site.url}}/{{ item.url }}">{{ item.title }}</a>
             </li>
           {% endif %}
           <li>

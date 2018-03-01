@@ -1,11 +1,11 @@
 ---
 # NUNCA USAR TABS, SEMPRE 2 ESPAÇOS
 -
-  url: abc
-  title: menu
+  url: noticias.html
+  title: noticias
 -
-  url: abc
-  title: menu2
+  url: pageexample.html
+  title: Exemplo de página
 -
   url: abc
   title: menu3
